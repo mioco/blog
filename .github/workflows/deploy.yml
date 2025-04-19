@@ -23,6 +23,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy CNAME
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME out/
+            echo "CNAME file copied to build output"
+          fi
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
