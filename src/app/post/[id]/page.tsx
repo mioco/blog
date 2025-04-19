@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Disqus } from '@/components/Disqus';
 
 export function generateStaticParams() {
   return getAllPostIds();
@@ -47,13 +48,7 @@ export default function PostPage({ params }: PostPageProps) {
           />
 
           <section className="mt-12 pt-8 border-t">
-            <h2 className="text-2xl font-bold mb-4">Comments</h2>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-gray-600">
-                Comments are coming soon! We're working on implementing a comment
-                system.
-              </p>
-            </div>
+            <Disqus shortname="osyos-blog" identifier={post.id} title={post.title} />
           </section>
         </article>
       </Layout>
