@@ -8,8 +8,8 @@
       "test"
     ],
     "excerpt": "Welcome to my blog! This is my first post.",
-    "content": "\n# Hello World\n\nWelcome to my blog! This is my first post. I'm excited to share my thoughts and experiences with you.\n\n## What to Expect\n\nIn this blog, I'll be writing about:\n\n- Web development\n- Programming tips and tricks\n- Personal projects\n- And much more!\n\n## Getting Started\n\nTo get started with this blog, you can:\n\n1. Read through the existing posts\n2. Check out the tags to find topics you're interested in\n3. Follow me on social media for updates\n\n## Code Example\n\nHere's a simple code example:\n\n```javascript\nfunction greet(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet('World'));\n```\n\n## Conclusion\n\nThank you for visiting my blog. I hope you find the content interesting and useful. Don't forget to check back regularly for new posts! ",
-    "wordCount": 128,
+    "content": "<p>Welcome to my blog! This is my first post. I'm excited to share my thoughts and experiences with you.</p>\n<h2>What to Expect</h2>\n<p>In this blog, I'll be writing about:</p>\n<ul>\n<li>Web development</li>\n<li>Programming tips and tricks</li>\n<li>Personal projects</li>\n<li>And much more!</li>\n</ul>\n<h2>Getting Started</h2>\n<p>To get started with this blog, you can:</p>\n<ol>\n<li>Read through the existing posts</li>\n<li>Check out the tags to find topics you're interested in</li>\n<li>Follow me on social media for updates</li>\n</ol>\n<h2>Code Example</h2>\n<p>Here's a simple code example:</p>\n<pre><code class=\"language-javascript\">function greet(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet('World'));\n</code></pre>\n<h2>Conclusion</h2>\n<p>Thank you for visiting my blog. I hope you find the content interesting and useful. Don't forget to check back regularly for new posts!</p>\n",
+    "wordCount": 125,
     "readingTime": 1
   }
 ]

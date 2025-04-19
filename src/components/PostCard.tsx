@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { format } from 'date-fns';
-import { PostMetadata } from '@/types/post';
+import { Post } from '@/types/post';
 import { TagList } from './TagList';
 
 interface PostCardProps {
-  post: PostMetadata;
+  post: Post;
 }
 
 export default function PostCard({ post }: PostCardProps) {

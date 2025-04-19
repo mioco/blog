@@ -1,5 +1,5 @@
 declare module '@/data/posts.json' {
-  import { PostMetadata } from '@/types/post';
-  const posts: PostMetadata[];
+  import { Post } from '@/types/post';
+  const posts: Post[];
   export default posts;
 } 

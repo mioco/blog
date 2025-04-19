@@ -1,7 +1,6 @@
 import { getPostData, getAllPostIds } from '@/lib/markdown';
 import Layout from '@/components/Layout';
 import { format } from 'date-fns';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Disqus } from '@/components/Disqus';
 import { TagList } from '@/components/TagList';
@@ -22,7 +21,7 @@ export default function PostPage({ params }: PostPageProps) {
 
     return (
       <Layout>
-        <article className="max-w-2xl mx-auto">
+        <article>
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
             <div className="flex flex-wrap gap-2 mb-4">
@@ -30,14 +29,13 @@ export default function PostPage({ params }: PostPageProps) {
             </div>
             <div className="flex justify-between text-sm text-gray-500">
               <span>{post.wordCount} words</span>
-              <span>{post.readingTime} min read</span>
               <span>Updated: {format(new Date(post.updatedAt), 'MMM d, yyyy')}</span>
             </div>
           </header>
 
           <div
             className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.date }}
+            dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           <section className="mt-12 pt-8 border-t">

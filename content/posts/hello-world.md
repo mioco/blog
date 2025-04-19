@@ -8,8 +8,6 @@ wordCount: 500
 readingTime: 3
 ---
 
-# Hello World
-
 Welcome to my blog! This is my first post. I'm excited to share my thoughts and experiences with you.
 
 ## What to Expect

@@ -10,7 +10,7 @@ export interface Post {
   readingTime: number;
 }
 
-export interface PostMetadata {
+export interface Post {
   id: string;
   title: string;
   excerpt: string;
