@@ -1,4 +1,4 @@
-import { Post, Post } from '@/types/post';
+import { Post } from '@/types/post';
 import postsData from '@/data/posts.json';
 
 export function getAllPostIds() {
