@@ -1,0 +1,15 @@
+[
+  {
+    "id": "hello-world",
+    "title": "Hello World",
+    "date": "2025-04-19",
+    "updatedAt": "2025-04-19",
+    "tags": [
+      "test"
+    ],
+    "excerpt": "Welcome to my blog! This is my first post.",
+    "content": "\n# Hello World\n\nWelcome to my blog! This is my first post. I'm excited to share my thoughts and experiences with you.\n\n## What to Expect\n\nIn this blog, I'll be writing about:\n\n- Web development\n- Programming tips and tricks\n- Personal projects\n- And much more!\n\n## Getting Started\n\nTo get started with this blog, you can:\n\n1. Read through the existing posts\n2. Check out the tags to find topics you're interested in\n3. Follow me on social media for updates\n\n## Code Example\n\nHere's a simple code example:\n\n```javascript\nfunction greet(name) {\n  return `Hello, ${name}!`;\n}\n\nconsole.log(greet('World'));\n```\n\n## Conclusion\n\nThank you for visiting my blog. I hope you find the content interesting and useful. Don't forget to check back regularly for new posts! ",
+    "wordCount": 128,
+    "readingTime": 1
+  }
+]

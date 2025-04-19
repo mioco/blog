@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Blog
+
+A static blog built with Next.js and deployed to GitHub Pages.
+
+## Features
+
+- Home page with recent posts grouped by year
+- Post list with tag filtering and pagination
+- Individual post pages with markdown support
+- About page with personal information
+- Responsive design
+- Static site generation for fast loading
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Adding New Posts
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Create a new markdown file in the `content/posts` directory
+2. Add frontmatter to your post:
+   ```markdown
+   ---
+   title: 'Your Post Title'
+   date: 'YYYY-MM-DD'
+   updatedAt: 'YYYY-MM-DD'
+   tags: ['tag1', 'tag2']
+   excerpt: 'A brief description of your post'
+   wordCount: 500
+   readingTime: 3
+   ---
+   ```
+3. Write your post content in markdown
+4. Build and deploy to GitHub Pages:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This blog is configured to deploy to GitHub Pages. To deploy:
 
-## Learn More
+1. Set up a GitHub repository
+2. Update the `next.config.js` file with your repository name
+3. Run:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Markdown
+- GitHub Pages
