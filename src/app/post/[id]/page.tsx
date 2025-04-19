@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Disqus } from '@/components/Disqus';
+import { TagList } from '@/components/TagList';
 
 export function generateStaticParams() {
   return getAllPostIds();
@@ -25,15 +26,7 @@ export default function PostPage({ params }: PostPageProps) {
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
             <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/posts?tag=${tag}`}
-                  className="px-2 py-1 bg-gray-100 rounded-full text-sm hover:bg-gray-200"
-                >
-                  {tag}
-                </Link>
-              ))}
+              <TagList tags={post.tags} />
             </div>
             <div className="flex justify-between text-sm text-gray-500">
               <span>{post.wordCount} words</span>
