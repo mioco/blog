@@ -26,7 +26,7 @@ export default function TagPage({
   return (
     <Layout>
       <div className="flex gap-8">
-        <TagsAside allTags={allTags} />
+        <TagsAside allTags={allTags} selectedTag={params.tag} />
 
         <div className="flex-1">
           <h2 className="text-2xl font-bold mb-6">

@@ -6,7 +6,7 @@ interface TagProps {
   className?: string;
 }
 
-export const Tag = ({ tag, href = `/posts?tag=${tag}`, className = '' }: TagProps) => {
+export const Tag = ({ tag, href = `/posts/${tag}`, className = '' }: TagProps) => {
   return (
     <Link
       href={href}
