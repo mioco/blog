@@ -1,0 +1,4 @@
+{
+    "origins": ["https://blog.osyo.monster"],
+    "originsRegex": ["http://localhost:[0-9]+"]
+}
