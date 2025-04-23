@@ -18,7 +18,7 @@ export const Giscus = () => {
     script.dataset.inputPosition = 'buttom';
     script.dataset.lang = 'zh-CN';
     script.crossOrigin = 'anonymous';
-    script.dataset.theme = 'dark';
+    script.dataset.theme = document.documentElement.classList[0] === 'dark' ? 'transparent_dark' : 'light';
     scriptRef.current = script;
     const container = document.body;
     container.appendChild(script);
