@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { notFound } from 'next/navigation';
 import { TagList } from '@/components/TagList';
 import { Giscus } from '@/components/Giscus';
+import { HighlightJS } from '@/components/HighlightJS';
 
 export function generateStaticParams() {
   return getAllPostIds();
@@ -21,6 +22,7 @@ export default function PostPage({ params }: PostPageProps) {
 
     return (
       <Layout>
+        <HighlightJS />
         <article>
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
