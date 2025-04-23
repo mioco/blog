@@ -2,8 +2,8 @@ import { getPostData, getAllPostIds } from '@/lib/markdown';
 import Layout from '@/components/Layout';
 import { format } from 'date-fns';
 import { notFound } from 'next/navigation';
-import { Disqus } from '@/components/Disqus';
 import { TagList } from '@/components/TagList';
+import { Giscus } from '@/components/Giscus';
 
 export function generateStaticParams() {
   return getAllPostIds();
@@ -38,8 +38,8 @@ export default function PostPage({ params }: PostPageProps) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          <section className="mt-12 pt-8 border-t">
-            <Disqus shortname="osyos-blog" identifier={post.id} title={post.title} />
+          <section className="mt-12 pt-8 border-t giscus">
+            <Giscus />
           </section>
         </article>
       </Layout>

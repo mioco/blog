@@ -2,6 +2,12 @@
 
 import { useEffect, useState } from 'react';
 
+function sendMessage<T>(message: T) {
+  const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+  if (!iframe) return;
+  iframe.contentWindow?.postMessage({ giscus: message }, 'https://giscus.app');
+}
+
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
@@ -16,6 +22,14 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    if (!iframe) return;
+    sendMessage({
+      setConfig: {
+        theme: newTheme === 'light' ? 'light' : 'transparent_dark',
+        reactionsEnabled: false,
+      }
+    });
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };

@@ -27,6 +27,7 @@ jobs:
         run: |
           if [ -f CNAME ]; then
             cp CNAME out/
+            cp giscus.json out/
             echo "CNAME file copied to build output"
           fi
 
