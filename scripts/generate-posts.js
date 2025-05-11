@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const remarkHtml = require('remark-html');
+const remarkGfm = require('remark-gfm');
 const { remark } = require('remark');
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
@@ -22,6 +23,7 @@ async function processPosts() {
     const { data, content } = matter(fileContents);
     const html = await remark()
       .use(remarkHtml.default)
+      .use(remarkGfm.default)
       .process(content)
 
     return {
