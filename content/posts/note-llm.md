@@ -2,7 +2,7 @@
 title: '初识大模型 0 - 预训练'
 date: '2025-05-11'
 updatedAt: '2025-05-11'
-tags: ['LLM']
+tags: ['LLM', 'BPE']
 ---
 
 # 初识大模型 0 - 预训练
