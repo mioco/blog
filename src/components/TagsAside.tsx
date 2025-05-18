@@ -4,7 +4,7 @@ const Tag = ({ tag, selected, href }: { href?: string; tag: string; selected: bo
     <Link
         key={tag}
         href={href || `/posts/${tag}`}
-        className={`block px-3 py-2 rounded ${
+        className={`block px-3 py-2 rounded shrink-0 ${
             selected
             ? 'bg-blue-100 text-blue-700'
             : 'hover:bg-gray-100 dark:hover:bg-gray-800'
@@ -19,9 +19,9 @@ export const TagsAside = ({ selectedTag, allTags }: {
     allTags: string[];
 }) => {
     return (
-        <aside className="w-32">
-          <h3 className="text-lg font-semibold mb-4">Tags</h3>
-          <div className="space-y-2">
+        <aside className="lg:w-32 lg:block flex items-center">
+          <h3 className="text-lg font-semibold mr-4 lg:mb-4">Tags</h3>
+          <div className="lg:space-y-2 flex lg:block overflow-auto">
             <Tag href="/posts" tag={'All Posts'} selected={!selectedTag} />
             {allTags.map((tag) => (
               <Tag key={tag} tag={tag} selected={selectedTag === tag} />

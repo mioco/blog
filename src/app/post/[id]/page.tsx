@@ -23,7 +23,7 @@ export default function PostPage({ params }: PostPageProps) {
     return (
       <Layout>
         <HighlightJS />
-        <article>
+        <article className='text-justify'>
           <header className="mb-8">
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
             <div className="flex flex-wrap gap-2 mb-4">

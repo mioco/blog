@@ -23,10 +23,10 @@ export default function PostsPage({
 
   return (
     <Layout>
-      <div className="flex gap-8">
+      <div className="flex gap-8 flex-col lg:flex-row">
         <TagsAside selectedTag={selectedTag} allTags={allTags} />
 
-        <div className="flex-1">
+        <div className="lg:flex-1">
           <h2 className="text-2xl font-bold mb-6">
             {selectedTag ? `Posts tagged with "${selectedTag}"` : 'All Posts'}
           </h2>

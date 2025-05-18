@@ -2,11 +2,11 @@ import { FaGithub } from 'react-icons/fa';
 
 export const Profile = () => {
     return (
-        <section className="mb-12 text-center">
+        <section className="mb-12 flex flex-col items-center">
           <img
             src="/avatar.jpg"
             alt="Profile"
-            className="w-32 h-32 rounded-full mx-auto mb-4"
+            className="w-32 h-32 rounded-full mb-4"
           />
           <h1 className="text-3xl font-bold mb-2">Osyo</h1>
           <p className="text-gray-600 mb-4">Engineering at Bytedance</p>

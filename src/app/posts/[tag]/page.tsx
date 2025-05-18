@@ -25,7 +25,7 @@ export default function TagPage({
 
   return (
     <Layout>
-      <div className="flex gap-8">
+      <div className="flex gap-8 flex-col lg:flex-row">
         <TagsAside allTags={allTags} selectedTag={params.tag} />
 
         <div className="flex-1">

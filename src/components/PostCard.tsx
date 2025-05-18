@@ -18,7 +18,7 @@ export default function PostCard({ post }: PostCardProps) {
         <span>{post.wordCount} words</span>
         {Boolean(post.updatedAt || post.date) && <span>Updated: {format(new Date(post.updatedAt || post.date), 'MMM d, yyyy')}</span>}
       </div>
-      <p className="text-gray-600 mb-4">{post.excerpt}</p>
+      <p className="text-gray-600 mb-4 text-justify">{post.excerpt}</p>
       <TagList tags={post.tags} />
     </article>
   );
